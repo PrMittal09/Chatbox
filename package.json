@@ -29,7 +29,6 @@
     "zone.js": "~0.9.1",
     "express":"*",
     "body-parser":"*",
-    "bcrypt": "^0.8.5",
     "@angular/cli": "~8.3.19",
     "@angular/compiler-cli": "~8.2.14"
   },
