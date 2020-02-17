@@ -1,0 +1,12 @@
+
+  <div>
+    <h1>Let's Start Chatting {{currentUser.name}} !</h1>
+  </div>
+
+<div *ngFor="let data of messageArray">
+  <strong>{{data.user}}</strong>: {{data.message}}
+</div>
+  
+  <input type="text" [(ngModel)]="message" />
+  <button (click)="sendMessage()">Send</button>
+
