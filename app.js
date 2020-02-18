@@ -9,7 +9,7 @@ app.use(function(req, res, next) {
 });
 
 let http = require('http');
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.set('port',port);
 
 //use dict directory of angular project folder
