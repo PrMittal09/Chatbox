@@ -8,7 +8,7 @@ import { Observable, observable } from 'rxjs';
 )
 
 export class ChatService {
-    private url = 'http://localhost:3000';
+    private url = 'https://chattingdash.herokuapp.com';
     private socket=io(this.url);
     public sendMessage(data) {
         this.socket.emit('message', data);

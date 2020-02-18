@@ -25,7 +25,6 @@ export class AuthserviceService {
       }
   
     public loginByName(data:any){
-        alert(JSON.stringify(data));
         localStorage.setItem('currentUser', JSON.stringify(data));
         //alert(JSON.stringify(data));
         this.currentUserSubject.next(data);
