@@ -3,18 +3,18 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-  
     "start": "node app.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-
     "postinstall": "ng build --output-path dist"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.14",
+    "@angular/cli": "~8.3.19",
+    "@angular/compiler-cli": "~8.2.14",
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
     "@angular/core": "~8.2.14",
@@ -28,13 +28,10 @@
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1",
     "express": "^4.17.1",
-    "socket.io": "^2.3.0",
-    "@angular/cli": "~8.3.19",
-    "@angular/compiler-cli": "~8.2.14"
+    "socket.io": "^2.3.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.19",
-    
     "@angular/language-service": "~8.2.14",
     "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",

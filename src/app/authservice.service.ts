@@ -18,10 +18,11 @@ export class AuthserviceService {
         return this.currentUserSubject.value;
     }
 
-    public loginByGmail(user) {
-    // store user details and jwt token in local storage to keep user logged in between page refreshes
-      localStorage.setItem('currentUser', JSON.stringify(user));
-      this.currentUserSubject.next(user);
+    public loginByName(data:any){
+      alert(JSON.stringify(data));
+      localStorage.setItem('currentUser', JSON.stringify(data));
+      //alert(JSON.stringify(data));
+      this.currentUserSubject.next(data);
     }
 
     public loginByName(name:any){

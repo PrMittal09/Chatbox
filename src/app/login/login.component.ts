@@ -39,8 +39,9 @@ export class LoginComponent implements OnInit {
   }
 
   signIn() {
-    this.authenticationService.loginByName(this.name);
-    this.user=this.name;
+    let loginData={name:this.name,provider:"login"}
+    this.authenticationService.loginByName(loginData);
+    this.user=loginData;
   }
   signOut() {
     this.user="";
