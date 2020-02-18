@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
   signIn() {
     let loginData={name:this.name,provider:"login"}
     this.authenticationService.loginByName(loginData);
-    this.user=loginData;
+    this.user=JSON.stringify(loginData);
   }
   signOut() {
     this.user="";

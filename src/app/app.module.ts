@@ -18,7 +18,7 @@ const appRoutes: Routes = [
 
 
 
-const google_auth_client_id:string="225063008309-f404s6of7tr6ehio3jnuhahmv0sd1ceh.apps.googleusercontent.com";
+const google_auth_client_id:string="225063008309-abcs1vc2ekc57cj3m8pl2f3dvvgl4fes.apps.googleusercontent.com";
 // const Facebook_auth_client_id:string="1107292062777356";
 export function getAuthServiceConfigs() {
 let config = new AuthServiceConfig(
