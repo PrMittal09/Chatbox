@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit() {
+    
   }
   
   socialSignIn(socialPlatform : string) {
@@ -38,10 +39,10 @@ export class LoginComponent implements OnInit {
   );
   }
 
-  signIn() {
+  async signIn() {
     let loginData={name:this.name,provider:"login"}
-    this.authenticationService.loginByName(loginData);
-    this.user=JSON.stringify(loginData);
+    await this.authenticationService.loginByName(loginData);
+    this.user=loginData;
   }
   signOut() {
     this.user="";

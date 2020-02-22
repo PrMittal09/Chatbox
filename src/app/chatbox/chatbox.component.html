@@ -2,11 +2,23 @@
   <div>
     <h1>Let's Start Chatting {{currentUser.name}} !</h1>
   </div>
+<br>
+<div>
+<select id="chatroom" [(ngModel)]="room">
+  <option value="social">Social</option>
+  <option value="personal">Personal</option>
+  <option value="professional">Professional</option>
+</select>
+<button type="submit" (click)="join()">Join</button>
+<button type="submit" (click)="leave()">Leave</button>
+</div>
 
-<div *ngFor="let data of messageArray">
+
+<div id="msgContainer" *ngFor="let data of messageArray" style="background-color:azure;">
   <strong>{{data.user}}</strong>: {{data.message}}
 </div>
   
-  <input type="text" [(ngModel)]="message" />
-  <button (click)="sendMessage()">Send</button>
+  <input type="text" [(ngModel)]="message" onkeydown = "if (event.keyCode == 13)
+  document.getElementById('btnSend').click()" placeholder="Type Your Message Here..." />
+  <button id="btnSend"(click)="sendMessage()">Send</button>
 

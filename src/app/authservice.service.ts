@@ -6,7 +6,7 @@ import {AuthService,GoogleLoginProvider} from 'angular-6-social-login';
 })
 
 export class AuthserviceService {
-    private currentUserSubject: BehaviorSubject<any>;
+    public currentUserSubject: BehaviorSubject<any>;
     public currentUser: Observable<any>;
     socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
     constructor(private socialAuthService: AuthService ) {
@@ -15,20 +15,21 @@ export class AuthserviceService {
     }
 
     public currentUserValue(): any {
+      //alert(JSON.stringify(this.currentUserSubject.value));
         return this.currentUserSubject.value;
+        
     }
 
     public loginByGmail(user) {
-      // store user details and jwt token in local storage to keep user logged in between page refreshes
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        this.currentUserSubject.next(user);
-      }
-  
-    public loginByName(data:any){
-        localStorage.setItem('currentUser', JSON.stringify(data));
-        //alert(JSON.stringify(data));
-        this.currentUserSubject.next(data);
-      }
+    // store user details and jwt token in local storage to keep user logged in between page refreshes
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      this.currentUserSubject.next(user);
+    }
+
+    public loginByName(data){
+      localStorage.setItem('currentUser', JSON.stringify(data));
+      this.currentUserSubject.next(data);
+    }
     public logout() {
     // remove user from local storage and set current user to null
         localStorage.removeItem('currentUser');

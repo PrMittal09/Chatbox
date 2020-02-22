@@ -1,20 +1,21 @@
-<div *ngIf="!user">
-<button (click)="socialSignIn('google')">Sign In With Google</button>
-<br>OR<br>
-<input type="text" [(ngModel)]="name" placeholder="Join Using Name"/>
-<button (click)="signIn()">Sign In</button>
-</div>
-<br><br>
 
-<div [ngSwitch]="user.provider">
-<div *ngSwitchCase="'google'">
-Welcome {{user.name}}
-<br><br>
-<button (click)="socialSignOut()">Sign Out From Google</button>
-</div>
-<div *ngSwitchCase="'login'">
-Welcome {{user.name}}
-<br><br>
-<button (click)="signOut()">Sign Out</button>
-</div>
-</div>
+<div *ngIf="!user">
+    <button (click)="socialSignIn('google')">Sign In With Google</button>
+    <br>OR<br>
+    <input type="text" [(ngModel)]="name" placeholder="Join Using Name"/>
+    <button (click)="signIn()">Sign In</button>
+    </div>
+    <br><br>
+    
+    <div [ngSwitch]="user.provider">
+    <div *ngSwitchCase="'google'">
+    Welcome {{user.name}}
+    <br><br>
+    <button (click)="socialSignOut()">Sign Out From Google</button>
+    </div>
+    <div *ngSwitchCase="'login'">
+    Welcome {{user.name}}
+    <br><br>
+    <button (click)="signOut()">Sign Out</button>
+    </div>
+    </div>
